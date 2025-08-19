@@ -296,11 +296,21 @@ function calc_update() {
         var c = 0;
         var d = - (mp + mb) * ga;
 
+
         var f = (((3*c)/a) - (Math.pow(b, 2) / Math.pow(a,2)) / 3.0);
+        // 2025-08-19 - Original calculation
+        // var g = (
+        //     ((2*Math.pow(b,3))/Math.pow(a,3)) -
+        //     ((9*b*c)/(Math.pow(a,2))) + ((27*d)/a) / 27.0
+        // );
+        // 2025-08-19 - Modified to match sondehub.org/calc
+        // Just moving a bracket around.
+        // This way at least we end up with the right target ascent rate and not something higher.
         var g = (
             ((2*Math.pow(b,3))/Math.pow(a,3)) -
-            ((9*b*c)/(Math.pow(a,2))) + ((27*d)/a) / 27.0
-        );
+            ((9*b*c)/(Math.pow(a,2))) + ((27*d)/a)) / 27.0
+        ;
+
         var h = (Math.pow(g,2) / 4.0) + (Math.pow(f,3) / 27.0);
 
         if(h>0) {
@@ -310,6 +320,8 @@ function calc_update() {
             var T = (-0.5 * g) - Math.sqrt(h);
             var U = Math.pow(T, 1.0/3.0);
             launch_radius = (S+U) - (b/(3*a));
+
+
         } else if(f==0 && g==0 && h==0) {
             // Three real and equal roots
             // Will this ever even happen?

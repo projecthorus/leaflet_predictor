@@ -35,29 +35,29 @@
 <!-- Debug window -->
 <div id="scenario_template" class="box ui-corner-all">
     <div id="scenario_template_scroller">
-    <h1>Debug Window</h1>
-    <span id="debuginfo">No Messages</span>
+    <h1>デバックウィンドウ</h1>
+    <span id="debuginfo">メッセージはありません</span>
     </div>
     </div>
     
     <!-- Prediction progress window -->
     <div id="status_message" class="box ui-corner-all">
         <span id="prediction_status"></span><br>
-        <a><span id="showHideDebug_status">Toggle Debug</span></a>
+        <a><span id="showHideDebug_status">トグルデバック</span></a>
     </div>
     
     <!-- Error window -->
     <div id="error_window" class="box ui-corner-all">
-        <span id="error_message">Nothing here!</span>
+        <span id="error_message">ここには何もありません!</span>
         <br /><br />
-        <a id="closeErrorWindow">Close</a>
+        <a id="closeErrorWindow">閉じる</a>
     </div>
 
 <!-- Scenario information -->
 <div id="scenario_info" class="box ui-corner-all">
     <img src="images/drag_handle.png" class="handle" />
     <h1>Scenario Information</h1>
-    <span id="cursor_info">Current mouse position: 
+    <span id="cursor_info">現在のマウスの位置: 
         Lat: <span id="cursor_lat">?</span> 
         Lon: <span id="cursor_lon">?</span>
     </span><br />
@@ -81,45 +81,45 @@
     </span>
     <br />
     <span class="ui-corner-all control_buttons">
-        <a class="control_button" id="showHideDebug">Show Debug</a> | 
-        <a class="control_button" id="showHideForm">Hide Launch Card</a> |
+        <a class="control_button" id="showHideDebug">デバックを見る</a> | 
+        <a class="control_button" id="showHideForm">打ち上げカードを非表示にする</a> |
         <a class="control_button" id="about_window_show">About</a>
     </span>
     <br />
-    <span><b>Non-Commercial Use Only. Please read the 'About' page.</b></span>
+    <span><b>非営利目的でのみご利用ください。「About」ページをお読みください。</b></span>
     <br />
-    <span><b>The Tawhiri engine is currently experiencing some performance issues. Please be patient!</b></span>
+    <span><b>Tawhiriエンジンは現在、パフォーマンスの問題が発生しています。しばらくお待ちください!</b></span>
 </div>
 
 <!-- Save location to cookie -->
 <div id="location_save" class="box ui-corner-all">
     <img src="images/drag_handle.png" class="handle" />
-    <h1>Save Launch Location</h1><br />
+    <h1>打ち上げ場所を保存</h1><br />
     <form name="location_save_form" id="location_save_form">
     <table name="req_table" id="req_table">
     <tr>
-    <td>Latitude: </td><td><input type="text" name="req_lat" id="req_lat" size="15"></td>
+    <td>緯度: </td><td><input type="text" name="req_lat" id="req_lat" size="15"></td>
     </tr><tr>
-    <td>Longitude: </td><td><input type="text" name="req_lon" id="req_lon" size="15"></td>
+    <td>経度: </td><td><input type="text" name="req_lon" id="req_lon" size="15"></td>
     </tr><tr>
-    <td>Altitude: </td><td><input type="text" name="req_alt" id="req_alt" size="15"></td>
+    <td>高度: </td><td><input type="text" name="req_alt" id="req_alt" size="15"></td>
     </tr><tr>
-    <td>Site Name: </td><td><input type="text" name="req_name" id="req_name" size="15"></td>
+    <td>サイト名: </td><td><input type="text" name="req_name" id="req_name" size="15"></td>
     </tr><tr>
     <td></td><td><input type="button" value="Save" name="submit" id="req_sub_btn"></td>
     </tr>
     </table>
     </form><br />
-    <a id="req_close">Close this window</a>
+    <a id="req_close">このウィンドウを閉じる</a>
 </div>
 
 <!-- View saved locations -->
 <div id="location_save_local" class="box ui-corner-all">
     <img src="images/drag_handle.png" class="handle" />
-    <b>Saved Locations</b><br />
+    <b>保存された場所</b><br />
     <span id="locations_table">?</span>
     <br />
-    <a id="locations_close">Close this window</a>
+    <a id="locations_close">ウィンドウを閉じる</a>
 </div>
 
 <!-- About window -->
@@ -137,13 +137,11 @@
     <p>
         Copyright 2013 Cambridge University Space Flight
     </p>
-    <h3>Burst Calculator</h3>
+    <h3>破裂計算機</h3>
         <p><a href="https://sondehub.org/calc">Burst Calculator Web Page</a></p>
     <h4>Usage</h4>
         <p>
-            This calculator is designed to help you find how much gas to put into a high altitude balloon
-            to achieve a desired burst altitude or ascent rate. You have to know the payload mass (including
-            parachute) and balloon mass.
+            この計算機は、高高度気球に充填するガスの量を算出するために設計されています。これにより、目標とする破裂高度や上昇速度を達成できます。必要なのは、ペイロード質量（パラシュートを含む）と気球の質量です。
         </p>
         <p>
             Usage is very straightforward: enter the payload mass into the first box, select the balloon
@@ -177,14 +175,14 @@
 <div id="burst-calc-wrapper" class="box ui-corner-all">
     <img src="images/drag_handle.png" class="handle" />
     <div id="burst-calc">
-        <b>Burst Calculator</b>
+        <b>破裂計算機</b>
         <br>
         <table id="input_table">
             <tr class="input_row">
-                <td class="input_label" colspan="2">Payload Mass (g)</td>
+                <td class="input_label" colspan="2">ペイロード質量 (g)</td>
                 <td class="input_instruction" rowspan="3">AND</td>
 
-                <td class="input_label" colspan="2">Balloon Mass (g)</td>
+                <td class="input_label" colspan="2">バルーン質量 (g)</td>
             </tr>
             <tr class="input_row">
                 <td colspan="2">
@@ -233,10 +231,10 @@
                 <td class="input_instruction" colspan="5">THEN</td>
             </tr>
             <tr class="input_row">
-                <td class="input_label" colspan="2">Target Burst Altitude (m)</td>
+                <td class="input_label" colspan="2">目標は列硬度 (m)</td>
 
                 <td class="input_instruction" rowspan="3">OR</td>
-                <td class="input_label" colspan="2">Target Ascent Rate (m/s)</td>
+                <td class="input_label" colspan="2">目標上昇速度 (m/s)</td>
             </tr>
             <tr class="input_row">
                 <td colspan="2">
@@ -252,23 +250,23 @@
                 <td id="tar_w" colspan="2">&nbsp;</td>
             </tr>
             <tr class="output_row">
-                <td class="output_label">Burst Altitude:</td>
+                <td class="output_label">破裂高度:</td>
                 <td class="output_data"><span id="ba">33000</span> m</td>
                 <td></td>
-                <td class="output_label">Ascent Rate:</td>
+                <td class="output_label">上昇速度:</td>
                 <td class="output_data"><span id="ar">2.33</span> m/s</td>
 
             </tr>
             <tr class="output_row">
-                <td class="output_label">Time to Burst:</td>
+                <td class="output_label">破裂時間:</td>
                 <td class="output_data"><span id="ttb">238</span> min</td>
                 <td></td>
-                <td class="output_label">Neck Lift:</td>
+                <td class="output_label">浮力（Neck lift）:</td>
                 <td class="output_data"><span id="nl">1733</span> g</td>
 
             </tr>
             <tr class="output_row">
-                <td class="output_label">Launch Volume:</td>
+                <td class="output_label">打ち上げ体積(Launch Volume):</td>
                 <td class="output_data"><span id="lv_m3">2.66</span> 
                     m<sup>3</sup></td>
                 <td></td>
@@ -291,15 +289,15 @@
     <div id="burst-calc-constants">
         <div class="constants_header">Constants</div><br />
         <div class="constants_warning">
-            For advanced use only! You can probably leave these alone.
+            上級者向けのみ！おそらくそのままにしておいてください。
         </div><br />
-        <label class="constant_label" for="gas">Gas</label><br />
+        <label class="constant_label" for="gas">ガス</label><br />
         <select id="gas" class="constant_field">
-            <option value="he">Helium</option>
-            <option value="h">Hydrogen</option>
+            <option value="he">ヘリウム</option>
+            <option value="h">水素</option>
 
-            <option value="ch4">Methane</option>
-            <option value="custom">Custom</option>
+            <option value="ch4">メタン</option>
+            <option value="custom">カスタム</option>
         </select><br />
         <label class="constant_label" for="rho_g">Gas Density (kg/m<sup>3</sup>)</label><br />
         <input type="text" id="rho_g" value="0.1786" class="constant_field" size="9" disabled="disabled"/><br />
@@ -348,7 +346,7 @@
     <form action="" id="modelForm" name="modelForm">
     <table id="launch-card">
         <tr>
-            <td>Launch Site:
+            <td>打ち上げ場所:
                 <span>
                     <a id="cookieLocations" class="tipsyLink" 
                         title="View your saved launch sites">Custom</a>
@@ -360,7 +358,7 @@
             </td>
         </tr>
         <tr>
-            <td>Latitude/Longitude:</td>
+            <td>緯度/経度:</td>
             <td>
                 <input id="lat" type="text" size="8" name="lat" value="-34.0297" 
                     onKeyDown="SetSiteOther()">&nbsp;/&nbsp;
@@ -372,76 +370,76 @@
             <td>
                 <span><a id="setWithClick" class="tipsyLink" 
                     title="Use the map to set your desired launch site">
-                    Set With Map</a></span>
+                    マップに保存する</a></span>
             </td>
             <td>
                 <span>
                     <a id="req_open" class="tipsyLink" 
                         title="Save this location to a browser cookie">
-                        Save Location</a>
+                        ロケーションを保存する</a>
                 </span>
             </td>
         </tr>
         <tr>
-            <td>Launch altitude (m):</td>
+            <td>打ち上げ高度 (m):</td>
             <td>
                 <input id="initial_alt" type="text" name="initial_alt" 
                     value="0">
             </td>
         </tr>
         <tr>
-            <td>Launch Time (UTC):</td>
+            <td>打ち上げ時刻 (JST):</td>
             <td>
                     <input id="hour" type="text" name="hour" value="" maxlength="2" size="2"> :
                     <input id="min" type="text" name="min" value="" maxlength="2" size="2">
                     <input id="sec" type="hidden" name="second" value="0"></td></tr>
-                    <tr><td>Launch Date:</td><td>
+                    <tr><td>打ち上げ日:</td><td>
                     <input id="day" type="text" name="day" value="" maxlength="2" size="2">
                     <select id="month" name="month">
                         <!-- Hard-coding these options in. These were generated by PHP in the old code. -->
-                        <option value="1">Jan</option>
-                        <option value="2">Feb</option>
-                        <option value="3">Mar</option>
-                        <option value="4">Apr</option>
-                        <option value="5">May</option>
-                        <option value="6">Jun</option>
-                        <option value="7">Jul</option>
-                        <option value="8">Aug</option>
-                        <option value="9">Sep</option>
-                        <option value="10">Oct</option>
-                        <option value="11">Nov</option>
-                        <option value="12">Dec</option>
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
                     </select>
                     <input id="year" type="text" name="year" value="" maxlength="4" size="4">
             </td>
         <tr>
             <td>
-                Ascent Rate (m/s): 
+                上昇速度 (m/s): 
             </td>
             <td><input id="ascent" type="text" name="ascent" value="5"></td>
         </tr>
         <tr>
-            <td>Burst/Float Altitude (m):</td>
+            <td>破裂/フロート高度 (m):</td>
             <td><input id="burst" type="text" name="burst" value="30000"></td>
         </tr>
         <tr>
             <td>Flight Profile:</td>
             <td><select id="flight_profile">
-                <option value="standard_profile" selected="selected">Standard</option>
-                <option value="float_profile">Float</option>
-                <option value="reverse_profile">Reverse (ascent only)</option>
+                <option value="standard_profile" selected="selected">標準</option>
+                <option value="float_profile">フロート</option>
+                <option value="reverse_profile">リバース (上昇のみ)</option>
             </select></td>
         </tr>
         <tr>
             <td colspan="2">
                 <a id="burst-calc-show" class="tipsyLink"
                     title="Use a calculator to find highlighted values">
-                    Use Burst Calculator</a>
+                    破裂計算機を使う</a>
             </td>
         </tr>
         <tr>
             <td>
-                Descent Rate (<a class="tipsyLink" title="At sea level">m/s</a>):
+                下降速度 (<a class="tipsyLink" title="At sea level">m/s</a>):
             </td>
             <td><input id="drag" type="text" name="drag" value="5"></td>
         </tr>
@@ -454,14 +452,14 @@
             </td>
         </tr> -->
         <tr>
-            <td>Prediction Type (<a class="tipsyLink" title="Information on the hourly/daily prediction functions." href="https://github.com/projecthorus/leaflet_predictor/wiki#using-the-hourlydaily-prediction-functionality" target="_blank">info</a>):</td>
+            <td>予測タイプ (<a class="tipsyLink" title="Information on the hourly/daily prediction functions." href="https://github.com/projecthorus/leaflet_predictor/wiki#using-the-hourlydaily-prediction-functionality" target="_blank">info</a>):</td>
             <td><select id="prediction_type">
-                <option value="single" selected="selected">Single</option>
-                <option value="1_hour">Hourly</option>
-                <option value="3_hour">3-Hourly</option>
-                <option value="6_hour">6-Hourly</option>
-                <option value="12_hour">12-Hourly</option>
-                <option value="daily">Daily</option>
+                <option value="single" selected="selected">単発予測</option>
+                <option value="1_hour">1時間ごと</option>
+                <option value="3_hour">3時間ごと</option>
+                <option value="6_hour">6時間ごと</option>
+                <option value="12_hour">12時間ごと</option>
+                <option value="daily">日ごと</option>
             </select></td>
         </tr>
         <tr>

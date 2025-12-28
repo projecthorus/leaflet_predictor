@@ -21,7 +21,7 @@ function initLaunchCard(){
     // $('#min').val(today.getMinutes());
     // $('#sec').val(today.getSeconds());
 
-    var today = moment.utc();
+    var today = moment.utc().add(9, 'hour');
 
     $('#year').val(today.year());
     $('#day').val(today.date());
@@ -48,6 +48,7 @@ function runPrediction(){
 
     // Months are zero-indexed in Javascript. Wat.
     var launch_time = moment.utc([year, month-1, day, hour, minute, 0, 0]);
+    launch_time.subtract(9, 'hour');
     run_settings.launch_datetime = launch_time.format();
     extra_settings.launch_moment = launch_time;
 
